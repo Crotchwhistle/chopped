@@ -5,10 +5,13 @@ import { formatDistanceToNow } from "date-fns"
 import { CalendarIcon, PlusIcon, SettingsIcon } from "lucide-react"
 
 import { Task } from "@/features/tasks/types"
+import { Member } from "@/features/members/types"
 import { Project } from "@/features/projects/types"
 import { useGetTasks } from "@/features/tasks/api/use-get-tasks"
 import { useGetMembers } from "@/features/members/api/use-get-members"
 import { useGetProjects } from "@/features/projects/api/use-get-projects"
+import { MemberAvatar } from "@/features/members/components/member-avatar"
+import { ProjectAvatar } from "@/features/projects/components/project-avatar"
 import { useWorkspaceId } from "@/features/workspaces/hooks/use-workspace-id"
 import { useCreateTaskModal } from "@/features/tasks/hooks/use-create-task-modal"
 import { useCreateProjectModal } from "@/features/projects/hooks/use-create-project-modal"
@@ -20,9 +23,6 @@ import { PageError } from "@/components/page-error"
 import { PageLoader } from "@/components/page-loader"
 import { Card, CardContent } from "@/components/ui/card"
 import { DottedSeparator } from "@/components/dotted-separator"
-import { ProjectAvatar } from "@/features/projects/components/project-avatar"
-import { Member } from "@/features/members/types"
-import { MemberAvatar } from "@/features/members/components/member-avatar"
 
 export const WorkspaceIdClient = () => {
     const workspaceId = useWorkspaceId()

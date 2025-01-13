@@ -4,7 +4,7 @@ import { z } from "zod";
 import Image from "next/image";
 import { useRef } from "react"
 import { toast } from "sonner";
-import { ArrowLeftIcon, CopyIcon, Delete, ImageIcon } from "lucide-react";
+import { ArrowLeftIcon, CopyIcon, ImageIcon } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
